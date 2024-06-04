@@ -1,0 +1,19 @@
+create table instructor(
+id int not null auto_increment,
+first_name varchar(10),
+last_name varchar(10),
+email varchar(15),
+instructor_detail_id int null,
+primary key(id),
+constraint instructor_fk foreign key(instructor_detail_id) references instructor_detail(id)
+);
+
+create table instructor_detail(
+id int not null auto_increment,
+youtube_profile varchar(10),
+hobby varchar(10),
+primary key(id)
+);
+
+select * from instructor_detail;
+select * from instructor;
