@@ -45,4 +45,19 @@ public class EmployeeService {
 		repository.deleteById(id);
 	}
 	
+	public List<Employee> getEmployessWithFirstNameNativeSQL(String fName)
+	{
+		return repository.getEmployeeWithFirstNameNativeSQL(fName);
+	}
+	
+	public List<Employee> getEmployessWithFirstName(String fName)
+	{
+		return repository.getEmployeeWithFirstName(fName);
+	}
+	
+	public Employee getEmployeeWithFirstAndLastName(String fName, String lname)
+	{
+		return repository.getEmployeeWithFirstAndLastName(fName,lname);
+	}
+	
 }

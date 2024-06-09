@@ -55,4 +55,21 @@ public class EmployeeController {
 		return "deleted emp id: "+id;
 	}
 	
+	@GetMapping("/employees/firstname/native/{fName}")
+	public List<Employee> getEmpWithFirstNameLike_NATIVE(@PathVariable String fName)
+	{
+		return service.getEmployessWithFirstNameNativeSQL(fName);
+	}
+	
+	@GetMapping("/employees/firstname/{fName}")
+	public List<Employee> getEmployeeWithFirstNameLike(@PathVariable String fName)
+	{
+		return service.getEmployessWithFirstName(fName);
+	}
+	@GetMapping("/employees/firstname/{fName}/lastname/{lName}")
+	public Employee getEmployeeWithFirstAndLastName(@PathVariable String fName, @PathVariable String lName)
+	{
+		return service.getEmployeeWithFirstAndLastName(fName,lName);
+	}
+	
 }
