@@ -1,0 +1,12 @@
+create table employee (
+eid int not null auto_increment,
+first_name varchar(10),
+last_name varchar(10),
+email varchar(15),
+primary key(eid) 
+)
+
+
+insert into employee values (
+1, 'Sovon','Singha','ss@gmail.com'),
+(2, 'Nawaz','Ahamed','nw@gmail.com');
